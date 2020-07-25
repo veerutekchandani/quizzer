@@ -1,0 +1,21 @@
+	li {
+		height: 70px;
+	}
+	ul {
+  			font-size: 16px;
+  			font-family: Arial, sans-serif;
+  			-webkit-overflow-scrolling: touch;
+		}
+		.scroll-list {
+			height: 95vh;
+			overflow: scroll;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+	.clickable li:hover {
+		cursor: pointer;
+	}
+	input {
+		width: 5%;
+		vertical-align: top;
+	}

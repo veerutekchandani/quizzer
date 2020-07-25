@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<!-- necessary files for css and javascript --> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/home.css" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <script type="text/javascript" src="./login/Valid.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- for modal -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- ------------ HEADER OF HOME PAGE  ------------------ -->
+ <div class="header">
+ 			<a href="#" style="padding: 0px;"><img src="Images/logo.png" class="img-rounded image"></a>
+  		<a href="#default" class="logo" style="font-family:'Abril Fatface', cursive;">Quizzer</a>
+  		<div style="margin-left: 230px;">
+    		<a class="active" href="#home">HOME</a>
+    		<a href="Features.html">FEATURES</a>
+    		<a href="About.html">ABOUT US</a>
+    		<a href="Contact.html">CONTACT</a>
+  		</div>
+  		<div class="header-right register">
+  			<button data-target="#myModal" data-toggle="modal" class="btn btn-success btn-lg" style="color : white;font-size : 15px;font-weight: 600;">REGISTER</button>&nbsp;
+  			<button data-target="#login" data-toggle="modal" class="btn btn-primary btn-lg" style="color : white;font-size : 15px;font-weight: 600;">LOGIN</button>
+  		</div>
+</div> 
+
+
+<!-- MAIN DIALOG , Register As : STUDENT OR RECRUITER Dialog -->
+<div class="container">
+	<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title"> Register As: </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+    		<div class="modal-body">
+          <div class="container"><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#Recruiter">
+						Recruiter
+						</button> 
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#Student">
+						User
+						</button>
+						<br><br>
+					</div>
+				</div>
+
+    		<div class="modal-footer">  if already registered &nbsp;&nbsp;
+          	<button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#login">
+          	&nbsp;&nbsp;Login&nbsp;&nbsp;
+          	</button>
+        </div>
+       </div>
+   </div>
+  </div>
+</div>   
+
+<!--  Recruiter Registration Dialog --> 
+<div class="modal fade" id="Recruiter">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">Recruiter Registration</h4>
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-sm-1"></div>
+        	<div class="col-sm-10">
+					<form method="POST" action="./login/Recruiter_Signup.php">
+						<div class="form-group">
+      				<label for="uname">Username:</label>
+      				<input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      			</div>
+      			<div class="form-group">
+      				<label for="email">Email:</label>
+      				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    				</div>
+            <div class="form-group">
+              <label for="org">Organization:</label>
+              <input type="text"  class="form-control" id="org" placeholder="Enter Company Name" name="org" required>
+            </div>
+					<div class="form-group">
+      				<label for="pass">Password:</label>
+      				<input type="password" class="form-control" id="pass1" placeholder="must contain at least 8 characters and at least 1-digit, 1-alphabet & 1-special character" name="pass1" onchange="IsValid(pass1.value,'demo1','pass1')" required /> <p id="demo1" style="color:red"></p>
+      		</div>
+					<div class="form-group">
+      				<label for="pass">Confirm Password:</label>
+      				<input type="password" class="form-control" id="pass2" placeholder="Re-enter password" name="pass2" onchange="validate(pass1.value,pass2.value,'demo','pass2')" required /> <p id="demo" style="color:red"></p>
+      		</div>
+					<div class="form-group form-check">
+      				<label class="form-check-label">
+        			<input class="form-check-input" type="checkbox" name="remember" required>
+        			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I agree on <a href="tc.htm"> terms and conditions</a>
+      				</label>
+    			</div>
+    				<input type="submit" name="submit" id="submit" value="&nbsp;Submit&nbsp;" class="btn btn-success">
+    				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    				<button type="reset" class="btn btn-danger">&nbsp;&nbsp;Reset&nbsp;&nbsp;</button>
+  				</form>
+  			</div>
+				</div>
+			</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Student Registration Dialog -->
+<div class="modal fade" id="Student">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">User Registration</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-sm-1"></div>
+        	<div class="col-sm-10">
+					<form  method="POST" action="./login/User_Signup.php">
+							<div class="form-group">
+      					<label for="name">Username:</label>
+      					<input style="width: 100%;" type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+    					</div>
+							<div class="form-group">
+      					<label for="email">Email:</label>
+      					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required />
+    					</div>
+    					<div class="form-group">
+      					<label for="pass3">Password:</label>
+      					<input type="password" class="form-control" id="pass3" placeholder="must contain at least 8 characters and at least 1-digit, 1-alphabet & 1-special character" name="pass3" onchange="IsValid(pass3.value,'demo2','pass3')" required /> <p id="demo2" style="color:red"></p>
+      				</div>
+							<div class="form-group">
+      					<label for="pass4">Confirm Password:</label>
+      					<input type="password" class="form-control" id="pass4" placeholder="Re-enter password" name="pass4" onchange="validate(pass3.value,pass4.value,'demo3','pass4')" required /> <p id="demo3" style="color:red"></p>
+      				</div>
+							<div class="form-group form-check">
+      					<label class="form-check-label">
+        				<input class="form-check-input" type="checkbox" name="remember" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        				I agree on <a href="tc.htm"> terms and conditions</a>
+      					</label>
+    					</div>
+    					<input type="submit" name="submit" id="submit" value="&nbsp;Submit&nbsp;" class="btn btn-success">
+    					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    					<button type="reset" class="btn btn-danger">&nbsp;&nbsp;Reset&nbsp;&nbsp;</button>
+  				</form>
+  				</div>
+				</div>
+			</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Dialog -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    	<div class="modal-body">
+        <div class="row">
+        	<div class="col-sm-1"></div>
+        	<div class="col-sm-10">
+					<div class="modal-header">
+          		<h4 class="modal-title">User login</h4>
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        	</div><br>
+					<form method="post" action="./login/Login.php">
+ 						<div class="form-group">
+    					<label for="email">Email:</label>
+    					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+  					</div>
+  					<div class="form-group">
+    					<label for="pwd">Password:</label>
+    					<input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
+  					</div>
+  					<div class="form-group">
+    					<label> Login As: </label>
+    						<select id="who" name="who" class="custom-select" style="font-size: 15px;">
+    							<option selected> Select </option>
+    							<option value="Recruiters"> Recruiter </option>
+    							<option value="Users"> User </option>
+    						</select>
+    						<p id="yes" style="color:red"></p>
+  					</div>
+ 						<div class="form-group form-check">
+    					<label class="form-check-label">
+      				<input class="form-check-input" type="checkbox"> &nbsp;&nbsp;&nbsp;&nbsp;Remember me
+    					</label>
+  					</div>
+  					<input type="submit" value="&nbsp;&nbsp;Login&nbsp;&nbsp;" id="login" name="login" onclick="check(who.value)" class="btn btn-success" />
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="modal-footer"> 
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#resetpass">
+        Reset Password</button>
+      </div>
+		</div>
+	</div>
+</div>
+  
+<!-- Password Reset Dialog -->
+<div class="modal fade" id="resetpass">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+			 	<div class="modal-body">
+          <div class="row">
+          	<div class="col-sm-1"></div>
+          	<div class="col-sm-10">
+						<div class="modal-header">
+          		<h4 class="modal-title">Reset Password</h4>
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		</div><br>
+						<form method="post" action="./login/Reset.php">
+    					<div class="form-group">
+    						<label for="email">Email:</label>
+    						<input type="email" class="form-control" id="mail" placeholder="Enter email" name="mail" required>
+  						</div>
+							<div class="form-group">
+      					<label for="pass">Enter new Password:</label>
+      					<input type="password" class="form-control" id="pass" placeholder="min 8 characters, at least 1-digit, 1-alphabet & 1-symbol" name="pass" onchange="IsValid(pass.value,'new','pass')" required /> <p id="new" style="color:red"></p>
+      				</div>
+							<div class="form-group">
+      					<label for="pass">Confirm Password:</label>
+      					<input type="password" class="form-control" id="_pass" placeholder="Re-enter password" name="_pass" onchange="validate(pass.value,_pass.value,'old','_pass')" required /> <p id="old" style="color:red"></p>
+      				</div>
+							<div class="form-group">
+    						<label> Category: </label>
+    						<select id="cate" name="cate" class="custom-select" style="font-size: 15px;">
+      						<option selected> Select </option>
+      						<option value="Recruiters"> Recruiter </option>
+      						<option value="Users"> User </option>
+    						</select><p id="no" style="color:red"></p>
+  						</div>
+							<input type="submit" value="&nbsp;Submit&nbsp;" id="forget" name="forget" onclick="Required(cate.value)" class="btn btn-success" />
+						</form>
+					</div>
+					</div>
+				</div>
+				<div class="modal-footer"> 
+          <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#login">Back</button>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- --------------------- HIRE PART AFTER HEADER ----------------------- -->
+<div class="contain">
+  	<img src="Images/hire.jpg">
+  	<button class="btn btn-success" data-target="#myModal" data-toggle="modal">REGISTER HERE</button>
+</div>
+<br><br><br><br><br>
+
+
+
+
+<!------------- WHO HAVE WORKED WITH US  ------------------>
+<h1 style="text-align: center;font-size: 50px;font-family: 'Aclonica';">WHO HAVE WORKED WITH US ???</h1><br><br>
+<div class="container">
+  <div class="row">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-none d-lg-block">
+            <div class="slide-box">
+              <img src="Images/CompanyLogo/amex.jpg" alt="First slide">
+              <img src="Images/CompanyLogo/amazon.jpg" alt="First slide">
+              <img src="Images/CompanyLogo/directi.jpg" alt="First slide">
+              <img src="Images/CompanyLogo/microsoft.jpg" alt="First slide">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-none d-lg-block">
+            <div class="slide-box">
+              <img src="Images/CompanyLogo/wooqer.png" alt="Second slide">
+              <img src="Images/CompanyLogo/uber.jpg" alt="Second slide">
+              <img src="Images/CompanyLogo/jpmorgan.jpg" alt="Second slide">
+              <img src="Images/CompanyLogo/morganstanley.jpg" alt="Second slide">
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>
+
+
+
+
+<!-- -------------------------- WHY YOU PREFER US SECTION ----------------------- -->
+
+<div class="container-fluid" style="width: 100%;background-color: #d1e0e0;padding-left: 60px;padding-right: 60px;">
+  <br><br><br><br><br><br>
+  <h1 style="text-align: center;font-size: 50px;font-family: 'Aclonica';">WHY YOU PREFER US ??? </h1>
+  <br><br><br><br>
+  <div class="row equal">
+    <div class="col-xs-12 col-sm-4 prefer-div" align="center">
+      <img src="Images/Why_Prefer_Us/easy.jpg" style="height: 60px;width: 60px;" class="img-rounded"><br><br>
+      <h2 style="font-weight: bold;"> Easy to use </h2><br>
+      <p class="prefer-font"> Our quiz creator is simple and easy to use. For student as well as for the administrators. With our online quiz creator it's easy to start, which makes it more fun. </p>
+    </div>
+    <div class="col-sm-4 prefer-div" align="center">
+      <img src="Images/Why_Prefer_Us/articles.png" style="height: 60px;width: 60px;" class="img-rounded"><br><br>
+      <h2 style="font-weight: bold;"> Best Articles</h2><br>
+      <p class="prefer-font"> We have best articles on almost all topics, submitted by developers around the globe. </p>
+    </div>
+    <div class="col-sm-4 prefer-div" align="center">
+      <img src="Images/Why_Prefer_Us/hire.png" style="height: 60px;width: 60px;" class="img-rounded"><br><br>
+      <h2 style="font-weight: bold;">Hire Best Talent</h2><br>
+      <p class="prefer-font">Take Quizzes to hire best talent around the globe. </p>
+    </div>
+  </div>
+  <div class="row equal">
+    <div class="col-xs-12 col-sm-4 prefer-div" align="center">
+      <img src="Images/Why_Prefer_Us/giveget.png" style="height: 60px;width: 60px;" class="img-rounded"><br><br>
+      <h2 style="font-weight: bold;">Give as well as Get</h2><br>
+      <p class="prefer-font">Learn from our best articles from developers around the globe. You can also contribute new articles if you find something which is not available in our website.</p>
+    </div>
+    <div class="col-sm-4 prefer-div" align="center">
+      <img src="Images/Why_Prefer_Us/support.png" class="img-rounded prefer-image"><br><br>
+      <h2 style="font-weight: bold;">24*7 Support</h2><br>
+      <p class="prefer-font">Do you have any questions about our online quiz software? Our support owls are always by your side and provide you with the best possible support! </p>
+    </div>
+    <div class="col-sm-4 prefer-div">
+      
+    </div>
+  </div>
+  <br><br><br><br><br><br><br>
+</div>
+
+
+
+
+<br><br>
+<!-- ---------------- OUR PROCESS ------------------------ -->
+<div class="container-fluid">
+  <div class="row" style="padding-left: 30px;padding-right: 30px;" align="center">
+    <div class="col-sm-3" style="padding: 30px;">
+      <img src="Images/Our_Process/create.png" style="height: 80px;width: 80px;margin-top: 30px;" class="img-rounded">
+      <h2 style="font-weight: bold;margin-top: 30px;">Create</h2>
+      <p style="font-size: 20px;font-family: 'Josefin Sans';margin-top: 10px;">
+        Quickly create great looking tests using multiple question types and formatting options.
+      </p>
+    </div>
+    <div class="col-sm-3" style="padding: 30px;">
+      <img src="Images/Our_Process/publish.png" style="height: 80px;width: 80px;margin-top: 30px;" class="img-rounded">
+      <h2 style="font-weight: bold;margin-top: 30px;">Publish</h2>
+      <p style="font-size: 20px;font-family: 'Josefin Sans';margin-top: 10px;">
+        Tests can either be published privately to a select group or open them up to everyone with a single link and registration page.
+      </p>
+    </div>
+    <div class="col-sm-3" style="padding: 30px;">
+      <img src="Images/Our_Process/analyze.png" style="height: 80px;width: 80px;margin-top: 30px;" class="img-rounded">
+      <h2 style="font-weight: bold;margin-top: 30px;">Analyze</h2>
+      <p style="font-size: 20px;font-family: 'Josefin Sans';margin-top: 10px;">
+        Quizzer instantly marks and grades your tests. Powerful reports then allow you to perform in-depth analysis across all responses. 
+      </p>
+    </div>
+    <div class="col-sm-3" style="padding: 30px;">
+      <img src="Images/Our_Process/hire.png" style="height: 80px;width: 80px;margin-top: 30px;" class="img-rounded">
+      <h2 style="font-weight: bold;margin-top: 30px;">Hire</h2>
+      <p style="font-size: 20px;font-family: 'Josefin Sans';margin-top: 10px;">
+        Take Quizzes and hire the best talent around the globe using our platform.
+      </p>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+
+<!-- --------------------- FEEDBACK FROM CUSTOMERS -------------- -->
+<section id="team" class="pb-5">
+<div class="container">
+        <br><br><br>
+        <h5 class="section-title h1" style="font-size: 50px;font-weight: bold;font-family: 'Aclonica';">OUR SATISFIED CUSTOMERS !!!</h5>
+        <br><br>
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <br><br>
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                    <h4 class="card-title" style="font-size: 20px;">Priyansh Kumar Rai</h4>
+                                    <mark style="font-size: 13px;">-Student, MNNIT ALLAHABAD</mark>
+                                    <div class="rating">
+                                      <span class="stars" data-stars="4">XXXXX</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <br><br>
+                                    <h4 class="card-title" style="font-size: 25px;">Priyansh Kumar Rai</h4><br>
+                                    <p class="card-text" align="center" style="font-size: 15px;">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <br><br>
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                    <h4 class="card-title" style="font-size: 20px;">Rajat Kathuriya</h4>
+                                    <mark style="font-size: 13px;">-Recruiter, Amazon</mark>
+                                    <div class="rating">
+                                      <span class="stars" data-stars="5">XXXXX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <br><br>
+                                    <h4 class="card-title" style="font-size: 25px;">Rajat Kathuriya</h4><br>
+                                    <p class="card-text" align="center" style="font-size: 15px;">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <br><br>
+                                    <p><img class="img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
+                                    <h4 class="card-title" style="font-size: 20px;">Umesh Kumar</h4>
+                                    <mark style="font-size: 13px;">-Student, MNNIT ALLAHABAD</mark>
+                                    <div class="rating">
+                                      <span class="stars" data-stars="3.5">XXXXX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <br><br>
+                                    <h4 class="card-title" style="font-size: 25px;">Umesh Kumar</h4><br>
+                                    <p class="card-text" style="font-size: 15px;" align="center">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- FREE TO USE, REGISTER FOR FREE -->
+<div class="container-fluid" style="margin-top: 80px;" align="center">
+  <p align="center" style="font-size: 40px;font-family: 'Aclonica';margin-bottom: 30px;"> Its Free to Use !! <br> Register Now and Get Hired </p>
+  <button data-target="#myModal" data-toggle="modal" class="btn btn-success" style="width: 250px;height: 40px;font-size: 20px;">Register Here For Free</button>
+  <button data-target="#login" data-toggle="modal" class="btn btn-primary" style="margin-left: 30px;width: 100px;height: 40px;font-size: 20px;">Login</button>
+</div>
+<br><br><br><br><br><br><br><br>
+
+
+
+<!-- ---------------------- SOCIAL MEDIA ---------------------- -->
+<div class="float-sm">
+  <div class="fl-fl float-fb">
+    <i class="fa fa-facebook"></i>
+    <a href="#" target="_blank"> Like us!</a>
+  </div>
+  <div class="fl-fl float-tw">
+    <i class="fa fa-twitter"></i>
+    <a href="#" target="_blank">Follow us!</a>
+  </div>
+  <div class="fl-fl float-gp">
+    <i class="fa fa-google-plus"></i>
+    <a href="#" target="_blank">Recommend us!</a>
+    </div>
+</div>
+
+
+<!-- ----------------------- FOOTER -------------------------- -->
+<footer id="footer" class="footer-1">
+  <div class="main-footer widgets-dark typo-light"><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget subscribe no-box">
+            <h5 class="widget-title" style="font-size: 30px;font-family: 'Aclonica'">QUIZZER<span></span></h5>
+            <p style="font-size: 15px;">About the company, little discription will goes here.. </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title" style="font-size: 20px;font-family: 'Aclonica'">Quick Links<span></span></h5>
+            <ul class="thumbnail-widget" style="font-size:15px; ">
+              <li><div class="thumb-content"><a href="#">Home</a></div></li>
+              <li><div class="thumb-content"><a href="Features.html">Features</a></div></li>
+              <li><div class="thumb-content"><a href="#.">Pricing</a></div></li>
+              <li><div class="thumb-content"><a href="About.html">About us</a></div></li>
+              <li><div class="thumb-content"><a href="#.">Privacy Policy</a></div></li>
+              <li><div class="thumb-content"><a href="Contact.html">Careers</a></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title" style="font-size: 20px;font-family: 'Aclonica'">Get Started<span></span></h5>
+            <p style="font-size: 15px;">Give Quiz and get hired.</p>
+            <a class="btn" href="#." target="_blank" style="font-size: 15px;">Register Now</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+            <h5 class="widget-title" style="font-size: 20px;font-family: 'Aclonica'">Contact Us<span></span></h5>
+            <ul class="thumbnail-widget" style="font-size:15px; ">
+            	<li><div class="thumb-content"><a href="#">Contact</a></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright Quizzer © 2020. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

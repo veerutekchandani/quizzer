@@ -1,0 +1,23 @@
+
+html, body{ height:100%; margin:0; }
+header{ height:50px; background:lightcyan; }
+footer{ height:200px; background:PapayaWhip; }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+footer{
+  margin-top:auto; 
+}
+
+#headdiv{
+	background : #f7f7f7;
+}
+
+#headlabel{
+	font-size:60px;
+	
+}

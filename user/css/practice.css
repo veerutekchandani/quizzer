@@ -1,0 +1,28 @@
+.page-heading {
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+}
+
+.contest-content {
+	width: 100%;
+	font-size: 18px;
+	border-spacing: 0 15px;
+	border-collapse: separate;
+}
+
+.contest-heading {
+	font-weight: bold;
+	font-size: 20px;
+	color : grey;
+	border-bottom:1px solid #cccccc;
+	padding-bottom: 5px;
+}
+
+.clickable {
+    background-color: white;
+}
+  
+.clickable:hover { 
+    background-color: #99d6ff; 
+    cursor: pointer;
+} 

@@ -1,0 +1,35 @@
+    .list1 {
+        font-size: 15px;
+        background-color: white;
+        border-left:4px solid green;
+        border-radius: 10px;
+    }
+    .list2 {
+      background-color: white;
+      border-left:2px solid blue;
+      border-radius: 10px;
+    }
+    i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .button_desc{
+        padding: 5px;
+        background-color: #3385ff;
+        border: solid 1px #c3c3c3;
+        color : white;
+        border-radius: 5px;
+    }
+    .description {
+      display: none;
+      padding: 10px;
+      background-color: white;
+      border-left: solid 3px #0d0d0d;
+      border-radius: 10px;
+    }

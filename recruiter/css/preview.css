@@ -1,0 +1,24 @@
+
+#parent{
+	text-align: center;
+	width:100%;
+	
+}
+
+#inside{
+	width:80%;
+	margin:10px;
+	padding : 20px;
+	display: inline-block;
+	border: solid gray 0.2px;
+	border: 1px;
+	font-size:20px;
+	text-align: left;
+	
+}
+
+
+
+#div1{
+	size:40px;
+}

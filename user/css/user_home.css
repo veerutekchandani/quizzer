@@ -1,0 +1,26 @@
+
+/* -------------- VERTICAL SCROLLSPY -------------------- */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+.affix {
+    top: 50px;
+  }
+  div.col-sm-9 div {
+    font-size: 28px;
+  }
+
+
+  /* ---------------------------- CHALLEMGES CARDS ------------------------- */
+.card {
+  width: 25rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 15px;
+}
+
+.card:hover{ 
+     box-shadow: 1px 8px 20px grey;
+    -webkit-transition:  box-shadow .6s ease-in;
+}
+
+
+
+  
